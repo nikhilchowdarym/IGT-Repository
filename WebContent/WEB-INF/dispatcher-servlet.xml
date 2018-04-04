@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+        
+    xsi:schemaLocation="http://www.springframework.org/schema/data/mongo
+    http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+    http://www.springframework.org/schema/beans
+   	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+   	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+     
+     <context:annotation-config />
+
+	<tx:annotation-driven />
+     
+     <mvc:annotation-driven/>
+     <context:component-scan base-package="com.igt.poc"/>
+     
+     
+     <!-- <bean id="mongoClient" class="com.mongodb.MongoClient">
+    	 
+    	<constructor-arg name="host" value="localhost" />
+    	<constructor-arg name="port" value="27017" />
+    </bean>
+	
+	<bean id="mongoDbFactory" class="org.springframework.data.mongodb.core.SimpleMongoDbFactory">
+      	<constructor-arg ref="mongoClient"/>
+    	<constructor-arg type="java.lang.String" value="rocketOzzy"/>
+   	</bean>
+   	
+   	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+    	<constructor-arg ref="mongoDbFactory"/>
+    </bean> -->
+	
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+	
+     
+</beans>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ERP Login</title>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600" rel="stylesheet">
+<style>
+body{background-image:url(/SampleApp/images/ERPLoginBG.jpg);font-family: 'Josefin Sans', sans-serif;}
+input[type='text']:focus,  input[type='password']:focus{ border:1px solid rgba(155, 250, 255, 0.82); outline:none; }
+input[type='text'], input[type='password']{ 
+transition:.2s ease-in all;
+    color: #508084;
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px 5px;
+    width: calc(100% - 16px);
+    margin: 8px 3px;
+    box-sizing: border-box;
+	}
+.container2{
+	
+    border: 0px solid red;
+    text-align: center;
+    margin: 35% 0px;
+    padding: 0px 26px;
+    box-sizing: border-box;
+ }
+.container1{ 
+       height: 100%;
+    width: 22%;
+    position: absolute;
+    right: 0px;
+background: rgba(0,0,0,0);
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(84,132,136,0.99) 99%, rgba(84,132,136,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(99%, rgba(84,132,136,0.99)), color-stop(100%, rgba(84,132,136,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(84,132,136,0.99) 99%, rgba(84,132,136,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(84,132,136,0.99) 99%, rgba(84,132,136,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(84,132,136,0.99) 99%, rgba(84,132,136,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(84,132,136,0.99) 99%, rgba(84,132,136,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#548488', GradientType=0 );
+	}
+	.Loginfooter{position: absolute;
+    bottom: 20px;
+    left: 20px;    font-size: 12px;}
+	.log-icon{  margin: 0px 0px 11px 0px;
+    overflow: hidden;
+    display: inline-block;}
+	.log-icon img{ width:68px; }
+	.title{    display: block;
+    text-align: center;
+	    margin-bottom: 10px;
+    color: #8af5ff;position:relative;
+    text-transform: uppercase;}
+	.title:after{
+		    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 25%;
+    border-bottom: 1px solid #89f5f8;
+    height: 0px;
+    top: 8px;
+    left: 162px;
+	
+		}
+		.title:before{
+		    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 25%;
+    border-bottom: 1px solid #89f5f8;
+    height: 0px;
+    top: 8px;
+    left: 23px;
+	
+		}
+    .button-log:hover{background:#84d8dc}
+	.button-log{
+		transition:.2s ease-in all;
+		cursor:pointer;
+	    background: #9bfaff;
+    color: #000000;
+    border: 0px solid #596169;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 8px 5px;
+    width: calc(100% - 16px);
+    margin: 8px 3px;
+    box-sizing: border-box;
+	 }
+	 
+	 ::-webkit-input-placeholder { /* Chrome */
+     color: #508084; font-family: 'Josefin Sans', sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+ color: #508084; font-family: 'Josefin Sans', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #508084; font-family: 'Josefin Sans', sans-serif;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #508084; font-family: 'Josefin Sans', sans-serif;
+  opacity: 1;
+}
+.two .right{text-align:right; }
+.two .left,.two .right{ 
+    width: 50%;
+    float: left;
+    display: inline-block;
+    color: #060606;
+}
+.two{    width: calc(100% - 16px);
+    margin: 0 auto; margin-top:10px;}
+	.logo12{ width:100%; text-align:center; padding: 19px 0px 0px 0px; }
+</style>
+</head>
+<body ng-app="application">
+<div class="container1">
+<!-- <div class="logo12">
+<img src="/SampleApp/images/ERPLoginBG.jpg" />
+</div> -->
+<div class="container2">
+
+<span class="log-icon"><img src="app/home/userIcon.png" /></span>
+<span class="title">Sign In</span>
+<input type="text" placeholder="username" class="form-control" ng-model="users.userName"/>
+<input type="password" placeholder="password" class="form-control" ng-model="users.password" />
+
+
+<span class="button-log" ng-click="login()">Login</span>
+
+</div>
+</div></div>
+<div class="Loginfooter">Copyright @ company Ltd</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div ng-controller="tasks" class="tasks">
+<div style="width:100%" align="center">
+<h1>Tasks</h1>
+	<div class="col-md-offset-4 col-md-8">
+		<div class="col-md-7 taskDiv">
+			<div class="col-md-12">
+			<div class="col-md-6"><lable>Employee Name :</lable></div>
+			<div class="col-md-6"><input type="text" name="PersonName" id="PersonName" ng-model="obj.personName" value="{{obj.personName}}"/></div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-6"><lable>Task Name :</lable></div>
+			<div class="col-md-6"><input type="text" name="taskName" id="taskName" ng-model="obj.taskName" value="{{obj.taskName}}"/></div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-6"><lable>Task status :</lable></div>
+			<div class="col-md-6"><input type="text" name="taskStatus" id="taskStatus" ng-model="obj.taskStatus"/></div>
+		</div>
+		</div>
+		
+	</div>
+	
+    <input type="button" value="Add Task" ng-click="submit()" ng-show="showAdd"> &nbsp&nbsp&nbsp&nbsp
+    <input type="button" value="Update Task" ng-click="update()" ng-show="showUpdate"> &nbsp&nbsp&nbsp&nbsp
+    <input type="button" value="View All Tasks" ng-click="viewAll()" >&nbsp&nbsp&nbsp&nbsp
+    
+    <input type="button" value="Back To Add Task" ng-show="showBack" ng-click="back()" >
+    
+    </br>
+    </br>
+</div>
+<div class="panel panel-default showDiv" style="width:100%"  align="center">
+
+	  
+  <div class="panel-heading"  align="center" style="width:100%" id="showDiv"><h4>Task Details</h4></div>
+  
+   <table class="table table-striped" >
+    <thead>
+   <th><b>Employee Name</b></th>
+    <th><b>Task Name</b></th>
+    <th><b>Task status</b></th>
+    <th><b>Edit Task</b></th>
+    
+    </thead>
+    <tbody>
+     <tr ng-repeat="data in data">
+     	<input type="hidden" value="{{data.id}}" id="taskid">
+     	<td >{{data.personName}}</td>
+        <td >{{data.taskName}}</td>
+        <td >{{data.taskStatus}}</td>
+        
+        <td>       
+        <a ng-click="editTasks(data.id)" value="{{data.id}}" ng-model="data.id"> <img height="25" width="25" src="images/edit.png"/></a>
+        <a ng-click="deleteTasks()"> <img height="25" width="25" src="images/delete.png"/></a>
+        </td>
+    </tr> 
+    </tbody>
+    
+  </table> 
+</div>
+ </div>
